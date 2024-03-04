@@ -1,2 +1,3 @@
-def hello() -> str:
-    return "Hello from traducir!"
+from .console import console
+
+__all__ = ["console"]

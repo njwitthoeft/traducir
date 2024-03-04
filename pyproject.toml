@@ -18,7 +18,17 @@ build-backend = "hatchling.build"
 
 [tool.rye]
 managed = true
-dev-dependencies = []
+dev-dependencies = [
+    "ruff>=0.3.0",
+    "mypy>=1.8.0",
+    "pre-commit>=3.6.2",
+]
+
+[[tool.mypy.overrides]]
+module  = [
+    "rich.console"    
+]
+ignore_missing_imports = true
 
 [tool.hatch.metadata]
 allow-direct-references = true
